@@ -22,7 +22,7 @@
 						<input type="hidden" name="id[]" value="<?= $row['id']; ?>">
 						<input type="checkbox" name="del[]" value="<?= $row['id']; ?>">
 					</td>
-					<td><input type="button" value="更新圖片" onclick="op('#cover','#cvr','./model/add.php?id=<?= $row['id']; ?>?table=<?= $do; ?>')"></td>
+					<td><input type="button" value="更新圖片" onclick="op('#cover','#cvr','./model/upload.php?id=<?= $row['id']; ?>&table=<?= $do; ?>')"></td>
 				</tr>
 			<?php
 			}
