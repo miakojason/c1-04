@@ -2,7 +2,6 @@
 	<p class="t cent botli">網站標題管理</p>
 	<form method="post" action="./api/edit.php">
 		<table width="100%">
-
 			<tr class="yel">
 				<td width="45%">網站標題</td>
 				<td width="23%">替代文字</td>
@@ -34,8 +33,6 @@
 				<td width="200px"><input type="button" onclick="op('#cover','#cvr','./model/<?= $do; ?>.php?table=<?= $do; ?>')" value="新增網站標題圖片"></td>
 				<td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
 			</tr>
-
 		</table>
-
 	</form>
 </div>

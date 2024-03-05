@@ -34,6 +34,8 @@ switch ($_GET['table']) {
         </tr>
     </table>
     <div class="cent">
+        <input type="hidden" name="table" value="<?=$_GET['table'];?>">
+        <input type="hidden" name="id" value="<?=$_GET['id'];?>">
         <input type="submit" value="更新"><input type="reset" value="重置">
     </div>
 </form>
