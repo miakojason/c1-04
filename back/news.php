@@ -17,7 +17,7 @@
 			foreach ($rows as $row) {
 			?>
 				<tr>
-					<td><textarea name="" id="" cols="60" rows="5"><?= $row['text']; ?></textarea></td>
+					<td><textarea name="text[]" id="" cols="60" rows="5"><?= $row['text']; ?></textarea></td>
 					<td><input type="checkbox" name="sh[]" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ''; ?>></td>
 					<td>
 						<input type="hidden" name="id[]" value="<?= $row['id']; ?>">
