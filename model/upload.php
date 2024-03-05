@@ -33,7 +33,7 @@ switch ($_GET['table']) {
             <td><input type="file" name="img" id=""></td>
         </tr>
     </table>
-    <div>
+    <div class="cent">
         <input type="submit" value="更新"><input type="reset" value="重置">
     </div>
 </form>
