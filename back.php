@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<?php include_once "./api/db.php"; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0068)?do=admin&redo=title -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -20,8 +21,11 @@
 	</div>
 	<iframe style="display:none;" name="back" id="back"></iframe>
 	<div id="main">
-		<a title="" href="?">
-			<div class="ti" style="background:url('use/'); background-size:cover;"></div><!--標題-->
+		<?php
+		$row = $Title->find(['sh' => 1]);
+		?>
+		<a title="<?= $row['text']; ?>" href="./index.php">
+			<div class="ti" style="background:url('./img/<?= $row['img']; ?>'); background-size:cover;"></div><!--標題-->
 		</a>
 		<div id="ms">
 			<div id="lf" style="float:left;">
@@ -83,14 +87,14 @@
 					</tbody>
 				</table>
 				<?php
-			$do = $_GET['do'] ?? 'title';
-			$file = "./back/{$do}.php";
-			if (file_exists($file)) {
-				include $file;
-			} else {
-				include "./back/title.php";
-			}
-			?>
+				$do = $_GET['do'] ?? 'title';
+				$file = "./back/{$do}.php";
+				if (file_exists($file)) {
+					include $file;
+				} else {
+					include "./back/title.php";
+				}
+				?>
 			</div>
 			<div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
 			<script>
